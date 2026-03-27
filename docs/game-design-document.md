@@ -1,0 +1,56 @@
+- Mapa
+	- Puntos de interés
+		- Riazor (inicio)
+		- Parque de Santa Margarita - Casa de las Ciencias
+		- Túnel
+		- Xardíns de Méndez Núñez
+		- Praza de María Pita
+		- Paseo marítimo
+		- Domus
+		- Torre de Hércules (Fin)
+	- Definimos mapa en SVG, modelamos blockouts con OpenSCAD
+	- Aproximación de Coruña, no tiene que incluir todas las calles. Approach semejante a Madrid Drive de Mario Kart 8 Deluxe Booster Course Pass
+- Objetivos
+	- Coger los objetos necesarios para el despegue
+	- Carta de navegación en Casa de las Ciencias
+	- Bocadillo para el viaje?
+	- Torre de Hércules
+- Core
+	- Manejo del coche
+		- PROMETEO Car Controller
+		- Manejo estilo Driver / Crazy Taxi (no tan rápido)
+	- Objetivos (Banderines)
+		- Se cogen en cualquier orden. Proyectan un banderín hacia el cielo estilo Fortnite ping
+		- Están en una burbuja azul (esfera con normales invertidas)
+		- Coger todos los objetivos planta un banderín especial en la torre de Hércules
+		- Deben de poder desactivarse
+	- Daño del coche
+		- Tenemos una salud del coche que se va deteriorando según nos embista la IA o choquemos contra paredes o tráfico
+	- IA
+		- Los tres bosses del juego anterior te persiguen
+		- No necesita ser realista, necesita ser divertida y verosímil
+	- Puntuación
+		- Rank basado en tiempo empleado (D, C, B, A, S, S+)
+		- Drifts?
+		- Roces con tráfico?
+	- Menú principal
+	- Ajustes
+	- Pausa
+- Mecánicas extras
+	- Nitro
+		- Se recupera con
+			- Pickups de nitro
+			- Drift
+	- Charcos de aceite (modifican parámetros de manejo del coche)
+		- Estelas negras en las ruedas que marcan aceite
+	- Confusión
+		- Invierte los controles
+	- Modo VR
+		- headtracking, primera persona
+	- Multiplicadores?
+	- Personalización
+		- Colores
+		- Neones
+		- Alerones
+		- Parachoques
+	- Tráfico
