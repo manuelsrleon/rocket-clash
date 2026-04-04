@@ -3,6 +3,9 @@ using UnityEngine.Events;
 
 public class GeneralGameActions : MonoBehaviour
 {
+    [SerializeField]
+    bool disableResume = false;
+    
     #region Events initialization
 
     [SerializeField]
@@ -41,8 +44,9 @@ public class GeneralGameActions : MonoBehaviour
         pause = true;
     }
 
-    public void Resume()
+    public void Resume(bool force = false)
     {
+        if (disableResume && !force) return;
         Time.timeScale = 1;
         OnGamePauseStateChange.Invoke(false);
         pause = false;
