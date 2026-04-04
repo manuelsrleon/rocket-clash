@@ -30,6 +30,7 @@ public class ActionDetector : MonoBehaviour
     }
 
     private void OnActionTrigger<T>(T cb) {
+        if (!enabled) return;
         OnAction.Invoke();
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class OutOfTimeScaleCountdown : MonoBehaviour
 {
     [SerializeField]
-    private bool startOnAwake;
+    private bool startOnAwake, canInterrupt = false;
 
     [SerializeField]
     private short secondsToCountDown;
@@ -35,6 +35,7 @@ public class OutOfTimeScaleCountdown : MonoBehaviour
     {
         if (isRunning)
         {
+            if (!canInterrupt) return;
             Stop();
         }
         OnBegin?.Invoke();
