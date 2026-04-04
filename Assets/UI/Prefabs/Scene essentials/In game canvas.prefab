@@ -535,6 +535,7 @@ GameObject:
   - component: {fileID: 7976475690449011118}
   - component: {fileID: 2351710202080264073}
   - component: {fileID: 7892520028022947896}
+  - component: {fileID: 141290867313158048}
   m_Layer: 5
   m_Name: In game canvas
   m_TagString: Untagged
@@ -687,6 +688,48 @@ MonoBehaviour:
   OnResume:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &141290867313158048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6926882744394780361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6837c258a8468f94aae18f8f8d472d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseActions
+  OnPauseTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+  OnResumeTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2236513546544534282}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2264046978475605673}
+        m_TargetAssemblyTypeName: OutOfTimeScaleCountdown, Assembly-CSharp
+        m_MethodName: Begin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1234522277839685891
 PrefabInstance:
   m_ObjectHideFlags: 0

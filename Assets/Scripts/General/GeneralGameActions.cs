@@ -28,7 +28,7 @@ public class GeneralGameActions : MonoBehaviour
         Application.Quit();
     }
 
-    static bool pause = false;
+    public static bool pause { get; private set; }  = false;
     public void TogglePause() {
         if (pause) {
             Resume();
