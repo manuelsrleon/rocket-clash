@@ -1,16 +1,35 @@
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class ActionDetector : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField]
+    private string actionName;
+
+    [SerializeField]
+    private UnityEvent OnAction;
+
+    private InputAction action;
+
+    private void Awake()
     {
-        
+        action = InputSystem.actions.FindAction(actionName);
+#if UNITY_EDITOR
+        if (action == null)
+        {
+            Debug.LogError($"Action '{actionName}' not found in Input System actions.");
+        }
+#endif
+        action.performed += OnActionTrigger;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        action.performed -= OnActionTrigger;
+    }
+
+    private void OnActionTrigger<T>(T cb) {
+        OnAction.Invoke();
     }
 }
