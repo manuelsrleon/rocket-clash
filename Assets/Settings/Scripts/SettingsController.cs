@@ -219,7 +219,9 @@ public class SettingsController : MonoBehaviour
         }
         catch (System.Exception e)
         {
+#if UNITY_EDITOR
             Debug.LogWarning($"Error loading settings: {e.Message}. Resetting to defaults.");
+#endif
             PlayerPrefs.DeleteKey(SettingsKey);
             PlayerPrefs.Save();
             ApplySettings();
